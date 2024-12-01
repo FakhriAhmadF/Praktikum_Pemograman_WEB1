@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Program Studi</title>
+    <style>
+        /* Gaya untuk efek hover */
+        .hover {
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .hover:hover {
+            color: red; /* Warna saat hover */
+        }
+
+        /* Gaya untuk hover kedua */
+        .hover2 {
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .hover2:hover {
+            color: green; /* Warna saat hover */
+        }
+
+        /* Gaya untuk hover ketiga */
+        .hover3 {
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .hover3:hover {
+            color: purple; /* Warna saat hover */
+        }
+
+        /* Gaya untuk hover keempat */
+        .hover4 {
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .hover4:hover {
+            color: orange; /* Warna saat hover */
+        }
+
+        /* Gaya untuk input pencarian */
+        .search {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Menyembunyikan elemen jurusan yang tidak cocok dengan pencarian */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <font size="7">Fakultas Ilmu Komputer</font><br>
+        <font size="5" color="gold">UNIVERSITAS KUNINGAN</font><br>
+        <font size="3">Alamat: 31. Pramuka No. 67, Purwawinangun, Kec. Kuningan, Kabupaten Kuningan, Jawa Barat 45512<font><br>
+        <!-- Input pencarian -->
+        <input type="search" placeholder="Cari jurusan..." class="search" id="searchInput" onkeyup="searchProgramStudi()">
+        <hr>
+    </header>
+
+    <main>
+        <article>
+            <div class="VisiMisi">
+                <h1>Visi - Misi Fakultas Ilmu Komputer</h1>
+                    <dl>
+                        <dt>Visi</dt>
+                            <dd>“Terwujudnya Fakultas Ilmu Komputer Universitas Kuningan sebagai fakultas andal yang unggul...”</dd>
+                        <dt>Misi</dt>
+                        <dd>
+                            <ol type="a">
+                                <li>Menyelenggarakan pendidikan, penelitian, dan pengabdian pada masyarakat...</li>
+                                <li>Membina dan mengembangkan kehidupan akademik yang sehat...</li>
+                                <!-- Lanjutkan isi misi -->
+                            </ol>
+                        </dd>
+                    </dl>
+                <hr>
+            </div>
+
+            <div class="program-studi" id="sistemInformasi">
+                <h2 class="hover" id="hover">Sistem Informasi</h2>
+                <img width="200px" src="" alt="SistemInformasi">
+                <h2 style="color: blue;">B</h2>
+                <p>Proses Terakreditasi B</p>
+
+                <h3>Visi Misi</h3>
+                <dl>
+                    <dt>Visi Program Studi Sistem Informasi</dt>
+                        <dd>“Terwujudnya program studi system informasi sebagai program studi yang handal dan unggul...”</dd>
+                    <dt>Misi Program Studi Sistem Informasi</dt>
+                        <dd>
+                            <ol type="a">
+                                <li>Menyelenggarakan pendidikan berbasis sistem informasi...</li>
+                                <li>Melaksanakan penelitian dan pengabdian pada masyarakat...</li>
+                                <!-- Lanjutkan isi misi -->
+                            </ol>
+                        </dd>
+                    </dl>
+                <hr>
+            </div>
+        
+            <div class="program-studi" id="teknikInformatika">
+                <h2 class="hover2" id="hover2">Teknik Informatika</h2>
+                <img width="200px" src="" alt="TeknikInformatika">
+                <h2 style="color: blue;">B</h2>
+                <p>Terakreditasi B</p>
+
+                <h3>Visi Misi</h3>
+                <dl>
+                    <dt>Visi Program Studi Teknik Informatika</dt>
+                        <dd>“Terwujudnya program studi yang handal dan unggul dibidang teknologi informasi...”</dd>
+                    <dt>Misi Program Studi Teknik Informatika</dt>
+                        <dd>
+                            <ol type="a">
+                                <li>Menyelenggarakan pendidikan bermutu tinggi dibidang Teknik Informatika...</li>
+                                <li>Memenuhi kebutuhan masyarakat melalui pengenalan, pengalihan dan penyebaran ilmu pengetahuan...</li>
+                                <!-- Lanjutkan isi misi -->
+                            </ol>
+                        </dd>
+                    </dl>
+                <hr>
+            </div>
+
+            <div class="program-studi" id="manajemenInformatika">
+                <h2 class="hover4" id="hover4">Manajemen Informatika</h2>
+                <img width="200px" src="" alt="ManajemenInformatika">
+                <h2 style="color: blue;">B</h2>
+                <p>Proses Terakreditasi B</p>
+        
+                <h3>Visi Misi</h3>
+                <dl>
+                    <dt>Visi Program Studi Manajemen Informatika</dt>
+                        <dd>“Mewujudkan program studi yang unggul dalam bidang teknologi informasi dan komunikasi...”</dd>
+                    <dt>Misi Program Studi Manajemen Informatika</dt>
+                        <dd>
+                            <ol type="a">
+                                <li>Menyelenggarakan pendidikan, penelitian, dan pengabdian pada masyarakat...</li>
+                                <li>Memberi bekal pengetahuan teori dan praktek kepada peserta didik...</li>
+                                <!-- Lanjutkan isi misi -->
+                            </ol>
+                        </dd>
+                    </dl>
+                <hr>
+            </div>
+
+        </article>
+    </main>
+
+    <script>
+        // Fungsi pencarian berdasarkan nama program studi
+        function searchProgramStudi() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const jurusanElements = document.querySelectorAll('.program-studi');
+            
+            jurusanElements.forEach(jurusan => {
+                const jurusanTitle = jurusan.querySelector('h2').textContent.toLowerCase();
+                if (jurusanTitle.includes(query)) {
+                    jurusan.classList.remove('hidden'); // Menampilkan elemen yang cocok
+                } else {
+                    jurusan.classList.add('hidden'); // Menyembunyikan elemen yang tidak cocok
+                }
+            });
+        }
+    </script>
+</body>
+</html>
